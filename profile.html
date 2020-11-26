@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <!-- app Header -->
+    <header>
+        <div class="login-header">
+            <p>
+            <h1 style="color: white;"><strong>Muyi Hira</strong></h1>
+            </p>
+        </div>
+    </header>
+
+    <!-- Banner image, profile image and full name -->
+    <div class="banner">
+        <div id="banner-image"><img src="" id="banner-img" alt="" height="100%" width="100%"
+                style="z-index: -2; border-radius: 8px;">
+            <button id="banner-btn"
+                style="margin-top: -5%; margin-right: 3%; z-index: 6; position: relative; font-weight: bolder; font-size: 15px; height: 3.2rem; float: right; width: 20%; border-radius: 0.5rem; background-color: rgba(197, 197, 199, 1); border: none;">Edit
+                Cover Photo <i class="fas fa-camera"></i></button>
+            <form action="" id="profile-form" style="display: none;"><input type="file" name="" id="select-profile">
+            </form>
+
+            <div class="prof-img">
+                <div class="profile-image image">
+                    <img src="" class="img" id="profile-img" alt="" height="170" width="170"
+                        style="border-radius: 85px;">
+                    <div id="change-image"><i class="fas fa-camera" style="font-size: 20px;"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal"
+            style="display: none; position: fixed; z-index: 100; padding-top: 75px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.9);">
+
+            <!-- The Close Button -->
+            <span class="close"
+                style="position: absolute; top: 15px; right: 35px; color: #fffdfd; font-size: 40px; font-weight: bold; transition: 0.3s;">
+                &times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01" style="margin: auto; display: block; width: 80%; max-width: 400px;">
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div>
+                <p id="fullName" style="font-size: xx-large; font-weight: bolder; margin-top: 18%; float: left;"></p>
+            </div><i data-toggle="modal" data-target="#updateNameForm" class="fas fa-pen"
+                style="float: right; margin-top: 15%; padding-left: 6px;"></i>
+        </div>
+
+        <!-- Update user fullname form modal -->
+        <div class="modal fade" id="updateNameForm" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 20%; margin-top: 10%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title w-100 font-weight-bold">Update fullname</h3>
+                    </div>
+                    <form name="myform" id="my-form">
+                        <div class="modal-body">
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="First name" id="firstName" name="firstName"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Last name" id="lastName" name="lastName"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User info details -->
+    <div class="profile-body">
+        <div>
+            <div class="profile-info">
+                <div style="margin: 3%;">
+                    <h3 style="margin-left: 1%;"><b>Intro</b></h3>
+                    <p style="margin-left: 2%;"><span id="Email" style="font-size: large; font-weight: bold;"></span>
+                    </p>
+                    <p style="margin-left: 2%;"><span id="Work" style="font-size: large; font-weight: bold;"></span></p>
+                    <p style="margin-left: 2%;"><span id="About" style="font-size: large; font-weight: bold;"></span>
+                    </p>
+                    <button data-toggle="modal" data-target="#updateForm"
+                        style="width: 100%; font-weight: bolder; font-size: 15px; border-radius: 5px; border: none; background-color: rgba(197, 197, 199, 0.8); height: 3rem;">Edit
+                        Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update user info form modal -->
+        <div class="modal fade" id="updateForm" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 20%; margin-top: 10%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title w-100 font-weight-bold">Update Bio</h3>
+                    </div>
+                    <form name="myform" id="myDetailsform">
+                        <div class="modal-body">
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Email" id="email" name="email"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Employment Status" id="work" name="work"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Bio" id="about" name="about"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FEEDS -->
+        <div>
+
+            <!-- Create post -->
+            <div class="profile-feeds">
+                <p id="profile-image" class="image"><img src="" class="img" id="profile-imge" alt="" height="50"
+                        width="50" style="border-radius: 25px;"></p> <button data-toggle="modal" data-target="#postForm"
+                    id="postbtn"
+                    style="font-size: large; font-weight: lighter; text-align: left; margin: 1rem 2rem 1rem 0rem; height: 4.6rem; float: right; width: 82%; border-radius: 3rem; background-color: rgba(231, 231, 231, 0.8); border: none;">What's
+                    on your mind?</button>
+                <button id="imagebtn"
+                    style="float: left; font-weight: bolder; margin: 5px 30px 0px 20px; border: none; background-color: white;">Photo</button>
+                <button id="videobtn"
+                    style="margin-top: 5px; font-weight: bolder; border: none; background-color: white;">Video</button>
+            </div>
+
+            <!-- Post setting -->
+            <div class="profile-post-setting">
+                <p style="margin: 1.7rem 5rem 0rem 2rem; font-weight: bold; font-size: large; float: left;">Posts</p>
+                <button
+                    style="font-weight: bolder; font-size: 15px; margin: 1rem 2rem 1rem 0rem; height: 3.2rem; float: right; width: 30%; border-radius: 0.5rem; background-color: rgba(197, 197, 199, 0.8); border: none;">Manage
+                    Posts</button>
+                <button
+                    style="font-weight: bolder; font-size: 15px; margin: 1rem 2rem 1rem 0rem; height: 3.2rem; float: right; width: 20%; border-radius: 0.5rem; background-color: rgba(197, 197, 199, 0.8); border: none;">Filters</button>
+            </div>
+
+            <!- Feeds ->
+                <div class="profile-post-feeds">
+                    <div
+                        style="border-bottom: rgb(71, 69, 69) solid 0.1px; margin: 1.7rem 1.7rem 0rem 2rem; height: 3rem;">
+                        <p style=" font-weight: bold; font-size: large; float: left; ">FEEDS</p>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <img src="xeem1.jpg" alt="" width="60%" height="35%" style="margin-left: 5%;">
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <img src="pix1.jpg" alt="" width="60%" height="35%" style="margin-left: 5%;">
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <img src="pix2.jpg" alt="" width="60%" height="35%" style="margin-left: 5%;">
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Create Post form modal -->
+    <div class="modal fade" id="postForm" tabindex="-1" role="dialog">
+        <div class="modal-dialog" style="margin-top: 8%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p id="profile-image" class="image"></p>
+                    <p id="fullname"
+                        style="font-size: xx-large; font-weight: bolder; margin-left: 12%; margin-top: 3%;"></p>
+                    <h3 class="modal-title w-100 font-weight-bold">Create Post</h3>
+                </div>
+                <form name="myform" id="my-Form">
+                    <div class="modal-body">
+                        <div class="md-form mb-2">
+                            <textarea placeholder="What's on your mind" name="post" id="post"
+                                class="form-control validate" cols="30" rows="10"></textarea>
+                            <div class="imagePreview"></div>
+                            <button id="addImage"
+                                style="background-color: rgb(240, 241, 243); height: 60px; width: 40px; border-radius: 5px; margin: 5px; display: none; align-items: center; justify-content: center; border: 1px dashed gray;">
+                                +</button>
+                        </div>
+                        <button id="postimage"
+                            style="float: left; font-weight: bolder; margin: 5px 30px 0px 0px; border: none; background-color: white;">Photo</button><input
+                            type="file" name="postImage" id="postImage" style="display: none;" accept="image/*">
+                        <button id="postvideo"
+                            style="margin-top: 5px; font-weight: bolder; border: none; background-color: white;">Video</button><input
+                            type="file" name="postVideo" id="postVideo" style="display: none;" accept="video/*">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.5.0.js"></script>
+    <script src="./bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <script src="profile.js"></script>
+</body>
+
+</html>

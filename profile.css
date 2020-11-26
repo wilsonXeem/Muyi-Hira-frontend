@@ -1,0 +1,155 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+header {
+    background-color: skyblue;
+    height: 7rem;
+}
+
+.login-header {
+    float: left;
+    padding-left: 2%;
+    height: 100%;
+}
+
+.banner {
+    background-color: white;
+    height: 45rem;
+    box-shadow: 0px 3px #e8e8eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    width: 58%;
+    float: left;
+}
+
+.profile-info {
+    background-color: white;
+    width: 67%;
+    float: right;
+    box-shadow: 0px 1.3px 1.3px 1.3px #d8dada;
+    border-radius: 10px;
+}
+
+.profile-body {
+    display: grid;
+    grid-template-columns: 43% 1fr;
+    grid-column-gap: 1.5rem;
+    margin-top: 1.8rem;
+}
+
+.profile-feeds {
+    background-color: white;
+    height: 11rem;
+    width: 72%;
+    float: left;
+    box-shadow: 0px 1.3px 1.3px 1.3px #d8dada;
+    border-radius: 10px;
+}
+
+.profile-post-setting {
+    background-color: white;
+    margin-top: 2rem;
+    height: 5rem;
+    width: 72%;
+    float: left;
+    box-shadow: 0px 1.3px 1.3px 1.3px #d8dada;
+    border-radius: 10px;
+}
+
+.profile-post-feeds {
+    background-color: white;
+    margin-top: 2rem;
+    height: 150rem;
+    width: 72%;
+    float: left;
+    box-shadow: 0px 1.3px 1.3px 1.3px #d8dada;
+    border-radius: 10px;
+}
+
+#profile-image {
+    /* background-color: #cccc; */
+    height: 4.6rem;
+    width: 4.6rem;
+    border-radius: 2.3rem;
+    margin: 1rem 0rem 0rem 1.5rem;
+    float: left;
+}
+
+.profile-image {
+    height: 17rem;
+    width: 17rem;
+    border-radius: 8.5rem;
+    z-index: 5;
+    top: 3.8%;
+    margin-left: 3.6%;
+    position: relative;
+}
+
+.image {
+    /* background-image: url("xeem1.jpg"); */
+    background-size: cover;
+}
+
+.prof-img {
+    height: 18.5rem;
+    width: 18.5rem;
+    border-radius: 9.25rem;
+    background-color: white;
+    z-index: 4;
+    margin-top: -16%;
+    margin-left: 40.5%;
+    position: relative;
+}
+
+#change-image {
+    height: 3.8rem;
+    width: 3.8rem;
+    border-radius: 1.9rem;
+    background-color: white;
+    border: black solid 1px;
+    z-index: 6;
+    position: relative;
+    top: -24%;
+    margin-left: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:focus {
+    outline-color: white;
+    outline-width: 0;
+}
+
+#banner-image {
+    height: 80%;
+    width: 70%;
+    border-radius: 1rem;
+    /* background-image: url('xeem2.jpg'); */
+    background-size: contain;
+    /* z-index: 3; */
+}
+
+.modal-backdrop {
+    opacity: 0.8 !important;
+}
+
+/* Modal Content (Image) */
+/* .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 400px;
+} */
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}

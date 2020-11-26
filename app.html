@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muyi Hira</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <div>
+        <!-- Login form -->
+        
+        <form action="profile.html" class="login-form">
+            <h1 style="font-weight: bolder; color: blue; font-size: 50px;">Muyi Hira</h1>
+            <div class="login-email">
+                <b style="color: blue;">Email</b> <br><input type="email" id="emailLog"
+                    style="width: 100%; height: 40px;"><br>
+            </div>
+            <div class="login-pword">
+                <b style="color: blue;">Password</b> <br><input type="password" id="passwordLog"
+                    style="width: 100%; height: 40px;"><br>
+                <a data-toggle="modal" data-target="#resetPassword" href="#" style="font-weight: bold;"><small>Forgot password</small></a>
+            </div>
+            <div class="login-btn"><button formtarget="profile.html" type="submit" class="btn-primary" id="btn"
+                    style="border: none;border-radius: 5px; width: 100%; height: 35px;">Login</button></div><br>
+            <p id="acctalready" style="color: green; font-size: small; font-style: italic; font-weight: bold;">Not a
+                user, <a data-toggle="modal" data-target="#signupForm" href="#">Sign up here!</a></p>
+        </form>
+
+        <!-- Password reset modal -->
+
+        <div class="modal fade" id="resetPassword" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 27%; margin-top: 13%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" style="outline-color: white;">&times;</button>
+                        <h3 class="modal-title w-100 font-weight-bold">Password Reset</h3>
+                    </div>
+                    <p id="message"
+                        style="margin: 5%; font-size: small; font-style: italic; font-weight: bold; display: none; margin-top: 0px; color: green;">
+                    </p>
+                    <div class="modal-footer" style="display: none;">
+                        <button type="submit" class="btn btn-success" data-dismiss="modal">Ok</button>
+                    </div>
+                    <form name="myform" id="reset-form">
+                        <div class="modal-body">
+                            <div class="md-form mb-2">
+                                <label>Enter your email</label>
+                                <input type="text" placeholder="" id="email-reset" name="email"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                            </div><p id="emailpg"
+                            style="font-size: x-small; font-style: italic; font-weight: bold; display: none; margin-top: 0px; color: red;">
+                        </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign up form modal -->
+        
+        <div class="modal fade" id="signupForm" tabindex="-1" role="dialog">
+            <div class="modal-dialog" style="width: 30%; margin-top: 8%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" style="outline-color: white;">&times;</button>
+                        <h3 class="modal-title w-100 font-weight-bold" style="color: blue; font-weight: bolder;">Sign Up</h3>
+                    </div>
+                    <form action="profile.html" name="myform" id="myform">
+                        <div class="modal-body">
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="First name" id="firstName" name="firstName"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                                <p id="firstNamep"
+                                    style="font-size: x-small; font-style: italic; font-weight: bold;  width: 100%; margin: 0px 0px; margin-top: 0px; color: red;">
+                                </p>
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Last name" id="lastName" name="lastName"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                                <p id="lastNamep"
+                                    style="font-size: x-small; font-style: italic; font-weight: bold; display: none; width: 100%; margin: 0px 0px; color: red;">
+                                </p>
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="text" placeholder="Email" id="email" name="email"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                                <p id="emailp"
+                                    style="font-size: x-small; font-style: italic; font-weight: bold; display: none; margin-top: 0px; color: red;">
+                                </p>
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="password" placeholder="New password" id="password" name="password"
+                                    class="form-control validate" style="margin-bottom: 3%;">
+                                <p id="passwordp"
+                                    style="font-size: x-small; font-style: italic; font-weight: bold; display: none; color: red;">
+                                </p>
+                            </div>
+
+                            <div class="md-form mb-2">
+                                <input type="date" placeholder="" id="dob" name="dob" class="form-control validate"
+                                    style="margin-bottom: 3%;">
+                                <p id="dobp"
+                                    style="font-size: x-small; font-style: italic; font-weight: bold; display: none; color: red; margin-bottom: 10px;">
+                                </p>
+                            </div>
+
+                            <label class="radio-inline"><input type="radio" placeholder="" id="male" name="gender"
+                                    class="form-control validate inp1" style="width: 40%; height: 65%;">Female</label>
+                            <label class="radio-inline"><input type="radio" placeholder="" id="male" name="gender"
+                                    class="form-control validate inp1" style="width: 40%; height: 65%;">Male</label>
+                            <p id="genderp"
+                                style="font-size: x-small; font-style: italic; font-weight: bold; display: none; color: red; margin-bottom: 10px;">
+                            </p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success" id="bttn">Create Account</button>
+                        </div>
+                        <p id="acct"
+                            style="margin-left: 5%; color: green; font-size: x-small; margin-top: 5px; font-style: italic; font-weight: bold;">
+                            Already have an account, <a onclick="closeForm()" href="#">Log in here!</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.5.0.js"></script>
+    <script src="./bootstrap-3.3.7/dist/js/bootstrap.js"></script>
+    <script src="app.js"></script>
+    <script src="password-reset.js"></script>
+</body>
+
+</html>

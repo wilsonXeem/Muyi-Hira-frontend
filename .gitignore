@@ -1,0 +1,6 @@
+*.png
+*.jpg
+bootstrap-3.3.7/*
+jquery.js
+jquery.min.js
+jquery-3.5.0.js
